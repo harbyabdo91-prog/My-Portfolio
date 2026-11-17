@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Student Registration</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main class="container">
+    <h1>Student Registration Form</h1>
+    <p class="intro">Please fill in your information below.</p>
+
+    <form action="Thankyou.html" method="get" enctype="multipart/form-data">
+      <input type="hidden" name="user_id" value="">
+
+      <table>
+        <tr>
+          <th><label for="first_name">First Name</label></th>
+          <td><input type="text" id="first_name" name="first_name" required
+              pattern="[A-Za-z ]+" title="Use letters only."></td>
+        </tr>
+        <tr>
+          <th><label for="last_name">Last Name</label></th>
+          <td><input type="text" id="last_name" name="last_name" required
+              pattern="[A-Za-z ]+" title="Use letters only."></td>
+        </tr>
+        <tr>
+          <th><label for="email">Email</label></th>
+          <td><input type="email" id="email" name="email" required></td>
+        </tr>
+        <tr>
+          <th><label for="password">Password</label></th>
+          <td><input type="password" id="password" name="password" required minlength="8"
+              pattern="(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[^A-Za-z0-9]).{8,}"
+              title="At least 8 characters, including uppercase, lowercase, number and special character."></td>
+        </tr>
+        <tr>
+          <th><label for="repeat_password">Repeat Password</label></th>
+          <td><input type="password" id="repeat_password" name="repeat_password" required minlength="8"
+              pattern="(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[^A-Za-z0-9]).{8,}"
+              title="Enter a password with at least 8 characters, uppercase, lowercase, number and special character."></td>
+        </tr>
+        <tr>
+          <th><label for="picture">User Picture</label></th>
+          <td><input type="file" id="picture" name="picture" accept="image/*"></td>
+        </tr>
+        <tr>
+          <th>Gender</th>
+          <td>
+            <label class="inline"><input type="radio" name="gender" value="Male" required> Male</label>
+            <label class="inline"><input type="radio" name="gender" value="Female"> Female</label>
+          </td>
+        </tr>
+        <tr>
+          <th><label for="faculty">Faculty</label></th>
+          <td>
+            <select id="faculty" name="faculty" required>
+              <option value="">-- Select Faculty --</option>
+              <option>Engineering</option>
+              <option>Computer Science</option>
+              <option>Medicine</option>
+              <option>Science</option>
+              <option>Commerce</option>
+              <option>Arts</option>
+              <option>Other</option>
+            </select>
+          </td>
+        </tr>
+        <tr>
+          <th>Interests</th>
+          <td>
+            <label class="inline"><input type="checkbox" name="interests" value="Swimming"> Swimming</label>
+            <label class="inline"><input type="checkbox" name="interests" value="Reading"> Reading</label>
+            <label class="inline"><input type="checkbox" name="interests" value="Programming"> Programming</label>
+          </td>
+        </tr>
+        <tr>
+          <th><label for="about">About You</label></th>
+          <td><textarea id="about" name="about" rows="4"></textarea></td>
+        </tr>
+        <tr>
+          <th><label for="phone">Phone Number</label></th>
+          <td><input type="tel" id="phone" name="phone" required
+              pattern="(010|011|012|015)[0-9]{8}"
+              title="Enter an 11-digit Egyptian mobile number starting with 010, 011, 012 or 015."></td>
+        </tr>
+        <tr>
+          <th><label for="gpa">GPA</label></th>
+          <td><input type="number" id="gpa" name="gpa" required min="0" max="4" step="0.1"></td>
+        </tr>
+        <tr>
+          <th><label for="dob">Date of Birth</label></th>
+          <td><input type="date" id="dob" name="dob" required></td>
+        </tr>
+        <tr>
+          <th>Terms</th>
+          <td>
+            <label class="inline">
+              <input type="checkbox" name="terms" value="agreed" required>
+              I agreed to the <a href="terms.html" target="_blank" rel="noopener">terms and conditions</a>
+            </label>
+          </td>
+        </tr>
+        <tr>
+          <td colspan="2" class="buttons">
+            <button type="submit">Submit</button>
+            <button type="reset" class="reset">Reset</button>
+          </td>
+        </tr>
+      </table>
+    </form>
+  </main>
+</body>
+</html>
